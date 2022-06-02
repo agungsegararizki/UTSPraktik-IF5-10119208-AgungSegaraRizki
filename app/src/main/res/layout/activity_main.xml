@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="100dp">
+
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:id="@+id/btn_back"
+            android:layout_width="19dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="2dp"
+            android:src="@drawable/btn_back" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_form"
+            android:layout_below="@id/btn_back"
+            android:text="Form Pengisian Data"
+            android:textSize="20sp"
+            android:textColor="@color/netral"
+            android:textStyle="bold"
+            android:layout_marginTop="36dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/brdr_nfo"
+            android:id="@+id/linear1"
+            android:layout_below="@id/txt_form"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Info"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                android:textColor="@color/netral"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Form berikut ini bertujuan untuk memberikan informasi kepada pusat agar dapat mudah dilaporkan"
+                android:textSize="12sp"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:textColor="@color/netral"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_jenistes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linear1"
+            android:layout_marginTop="24dp"
+            android:text="Jenis Tes"
+            android:textColor="@color/netral"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio_jenistes"
+            android:layout_below="@id/txt_jenistes"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_antigen"
+                android:text="Rapid Antigen"
+                android:textColor="@color/netral"
+                android:textSize="14sp"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_pcr"
+                android:text="PCR"
+                android:textColor="@color/netral"
+                android:textSize="14sp"/>
+        </RadioGroup>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_terkonfirmasi"
+            android:layout_below="@id/radio_jenistes"
+            android:text="Tanggal Terkonfirmasi"
+            android:textColor="@color/netral"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"/>
+
+        <EditText
+            android:id="@+id/field_konfir"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/txt_terkonfirmasi"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/brdr_field"
+            android:drawableRight="@drawable/btn_tgl"
+            android:hint="Pilih Tanggal"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textColorHint="@color/black"
+            android:textSize="14sp"
+            tools:ignore="TouchTargetSizeCheck" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_nik"
+            android:layout_below="@id/field_konfir"
+            android:text="NIK"
+            android:textColor="@color/netral"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp" />
+        <EditText
+            android:id="@+id/field_nik"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/txt_nik"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/brdr_field"
+            android:textColorHint="@color/black"
+            android:textSize="14sp"
+            android:hint="Masukan NIK"
+            android:layout_marginBottom="12dp"
+            android:paddingEnd="12dp"
+            android:paddingStart="12dp"/>
+
+        <TextView
+            android:id="@+id/txt_nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/field_nik"
+            android:layout_marginTop="12dp"
+            android:text="Nama"
+            android:textColor="@color/netral"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+        <EditText
+            android:id="@+id/field_nama"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/txt_nama"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/brdr_field"
+            android:textColorHint="@color/black"
+            android:textSize="14sp"
+            android:hint="Masukan Nama"
+            android:layout_marginBottom="12dp"
+            android:paddingEnd="12dp"
+            android:paddingStart="12dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_tgllahir"
+            android:layout_below="@id/field_nama"
+            android:text="Tanggal Lahir"
+            android:textColor="@color/netral"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp" />
+        <EditText
+            android:id="@+id/field_tgllahir"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/txt_tgllahir"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/brdr_field"
+            android:textColorHint="@color/black"
+            android:textSize="14sp"
+            android:hint="Pilih Tanggal"
+            android:drawableRight="@drawable/btn_tgl"
+            android:layout_marginBottom="12dp"
+            android:paddingEnd="12dp"
+            android:paddingStart="12dp"/>
+
+        <TextView
+            android:id="@+id/txt_jeniskelamin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/field_tgllahir"
+            android:layout_marginTop="24dp"
+            android:text="Jenis Kelamin"
+            android:textColor="@color/netral"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio_jeniskelamin"
+            android:layout_below="@id/txt_jeniskelamin"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_lakik"
+                android:text="Laki - Laki"
+                android:textColor="@color/netral"
+                android:textSize="14sp"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_cewek"
+                android:text="Perempuan"
+                android:textColor="@color/netral"
+                android:textSize="14sp"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/txt_hubungan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/radio_jeniskelamin"
+            android:layout_marginTop="24dp"
+            android:text="Hubungan Dengan Anda"
+            android:textColor="@color/netral"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/radio_hubungan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_hubungan"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Orang Tua"
+                android:textColor="@color/netral"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Suami/Istri"
+                android:textColor="@color/netral"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Anak"
+                android:textColor="@color/netral"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kerabat Lainnya"
+                android:textColor="@color/netral"
+                android:textSize="14sp" />
+        </RadioGroup>
+        <LinearLayout
+            android:id="@+id/linear2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/radio_hubungan"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:text="Dengan ini saya menyetujui bahwa data yang saya isikan adalah benar"
+                android:textColor="@color/netral"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_selanjutnya"
+            style="@style/tombolhejo"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/linear2"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="32dp"
+            android:onClick="tekanlanjut"
+            android:text="Selanjutnya"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+</ScrollView>
